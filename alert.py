@@ -1,6 +1,7 @@
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
+
 def apply_conditional_formatting():
     file_path = "data/Final Template.xlsx"
 

@@ -5,6 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "dataframe-image>=0.2.7",
+    "matplotlib>=3.10.8",
     "openpyxl>=3.1.5",
     "pandas>=3.0.1",
+    "pandas-stubs>=3.0.0.260204",
+    "pyright>=1.1.408",
+    "python-dotenv>=1.2.2",
+    "requests>=2.32.5",
+    "tool>=0.8.0",
 ]

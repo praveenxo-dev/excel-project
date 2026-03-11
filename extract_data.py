@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def extract_data(df: pd.DataFrame, df1: pd.DataFrame, outdf: pd.DataFrame):
     """_summary_
 
@@ -23,6 +24,11 @@ def extract_data(df: pd.DataFrame, df1: pd.DataFrame, outdf: pd.DataFrame):
     }
     data_RTR = {
         "Completed": status_counts_RTR.get("completed", 0),
+        "Inprogress": status_counts_RTR.get("In progress", 0),
+        "Not started": status_counts_RTR.get("Not Started", 0),
+        "Pending Review": status_counts_RTR.get("Pending Review", 0),
+        "Sent to Mobileum Review": status_counts_RTR.get("Sent to Mobileum Review", 0),
+        "Testing": status_counts_RTR.get("Testing", 0),
     }
     summary_df: pd.DataFrame = pd.DataFrame([data_P2P, data_RTR], index=["P2P", "RTR"])
     return summary_df
