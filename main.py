@@ -44,7 +44,7 @@ def main():
             header=False,
         )
     print(
-        f"Summary data written to Excel file successfully in {time.time() - start_time:.2f} seconds."
+        f"'Summary data written to Excel file successfully in {time.time() - start_time:.2f} seconds.'"  # noqa: E501
     )
     apply_conditional_formatting()
     print(f"Conditional formatting applied in {time.time() - start_time:.2f} seconds.")
