@@ -1,15 +1,35 @@
 repos:
+  # Basic file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+
+  # Python formatter
   - repo: https://github.com/psf/black
     rev: 26.3.1
     hooks:
       - id: black
+
+  # Import sorting
+  - repo: https://github.com/pycqa/isort
+    rev: 8.0.1
+    hooks:
+      - id: isort
+
+  # Fast linter (better than flake8)
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.6
     hooks:
       - id: ruff
+        args: [--fix]
+
+  # Remove outputs from Jupyter notebooks
+  # - repo: https://github.com/kynan/nbstripout
+  #   rev: 0.9.1
+  #   hooks:
+  #     - id: nbstripout
