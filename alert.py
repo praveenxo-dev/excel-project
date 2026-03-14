@@ -27,5 +27,3 @@ def apply_conditional_formatting():
                     cell.fill = green_fill
 
     wb.save(file_path)
-
-apply_conditional_formatting()
