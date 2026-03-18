@@ -7,6 +7,7 @@ def extract_data(df: pd.DataFrame, df1: pd.DataFrame, outdf: pd.DataFrame):
     Args:
         df (pd.DataFrame): _description_
         df1 (pd.DataFrame): _description_
+        df2 (pd.DataFrame): _description_
         outdf (pd.DataFrame): _description_
 
     Returns:
